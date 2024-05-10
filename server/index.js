@@ -7,7 +7,13 @@ import Database from './databases/database.js'
 import bodyParser from 'body-parser';
 
 // Enable CORS middleware
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://mini-blogger-ten.vercel.app"],
+        methods: ["POST", "GET"],
+        credentails: true
+    }
+));
 app.use(bodyParser.json({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 

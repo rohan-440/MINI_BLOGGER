@@ -13,7 +13,7 @@ function Create() {
         setBlog({ ...blog, [e.target.name]: e.target.value });
     }
 
-    const base_url = "http://localhost:8000";
+    const base_url = "https://mini-blogger-ten.vercel.app";
 
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevent default form submission behavior

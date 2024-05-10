@@ -18,7 +18,7 @@ function Register() {
     const onInputChange = (e) =>{
         setregisterdetails({...registerdetails,[e.target.name] : e.target.value});
     }
-    const base_url = "http://localhost:8000";
+    const base_url = "https://mini-blogger-ten.vercel.app";
 const registerUser = () => {
     axios.post(base_url + "/register", registerdetails)
             .then(response => {

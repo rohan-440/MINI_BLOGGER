@@ -11,7 +11,7 @@ function Home() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get("http://localhost:8000/getBlog");
+                const res = await axios.get("https://mini-blogger-ten.vercel.app/getBlog");
                 if (Array.isArray(res.data)) {
                     setBlogs(res.data);
                 } else {
@@ -26,7 +26,7 @@ function Home() {
     }, []);
 
     const handleDelete = (id) => {
-       axios.delete("http://localhost:8000/deleteBlog/" + id)
+       axios.delete("https://mini-blogger-ten.vercel.app/deleteBlog/" + id)
        .then(res =>{ console.log(res)
     window.location.reload()
        }
