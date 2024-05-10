@@ -9,7 +9,7 @@ import bodyParser from 'body-parser';
 // Enable CORS middleware
 app.use(cors(
     {
-        origin: 'https://mini-blogger-frontend.vercel.app'
+        // origin: 'https://mini-blogger-frontend.vercel.app'
        
     }
 ));
