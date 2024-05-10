@@ -15,7 +15,7 @@ function Login() {
     const inputChange = (e) =>{
         setLogin({...login,[e.target.name]:e.target.value});
     }
-    const base_url = "https://mini-blogger-ten.vercel.app";
+    const base_url = "https://mini-blogger-backend.vercel.app";
     const loginUser = async() =>{
         try {
             const response = await axios.post(base_url+"/login", login);
