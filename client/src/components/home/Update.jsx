@@ -13,7 +13,7 @@ function Update() {
         // Fetch the blog post data based on the ID
       
             
-                axios.get(`https://mini-blogger-ten.vercel.app/getUser/${id}`)
+                axios.get(`https://mini-blogger-backend.vercel.app/getUser/${id}`)
                 .then(res => {
                     setTopic(res.data.topic)
                     setDescription(res.data.description);
@@ -25,7 +25,7 @@ function Update() {
 
     const handleSubmit =  (e) => {
         e.preventDefault();
-        axios.put("https://mini-blogger-ten.vercel.app/updateBlog/"+id,{topic,description})
+        axios.put("https://mini-blogger-backend.vercel.app/updateBlog/"+id,{topic,description})
         .then(res => {
             console.log(res)
             navigate('/home')
